@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.leapmotion.leap.Listener"/>
 <fullyQualifiedTypeName name="com.leapmotion.leap.Frame"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.Pointable.Zone"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.Listener"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.Controller"/>
 <fullyQualifiedTypeName name="com.leapmotion.leap.Pointable"/>
 <fullyQualifiedTypeName name="com.leapmotion.leap.Vector"/>
-<fullyQualifiedTypeName name="com.leapmotion.leap.Pointable.Zone"/>
 </qualifiedTypeNameHistroy>
