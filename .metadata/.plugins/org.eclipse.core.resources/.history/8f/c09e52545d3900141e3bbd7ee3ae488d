@@ -1,0 +1,76 @@
+package pete;
+
+import java.io.IOException;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Frame;
+import com.leapmotion.leap.Listener;
+import com.leapmotion.leap.Pointable;
+import com.leapmotion.leap.Screen;
+import com.leapmotion.leap.ScreenList;
+import com.leapmotion.leap.Vector;
+
+public class Leap1 extends Listener {
+
+	public void onConnect(Controller controller) {
+		System.out.println("Connected");
+	}
+	
+	public void onFrame(Controller controller) {
+		long lastFrameId = 0;
+    	Frame frame = controller.frame();
+    	if (frame.id() == lastFrameId) return;
+    	processFrame(frame);
+    	ScreenList screenList = controller.locatedScreens();
+    	Screen screen;
+    	if (!screenList.isEmpty()) screen = screenList.get(0);
+    	lastFrameId = frame.id();
+	
+	}
+	public void processFrame(Frame frame) {
+		
+		
+		Pointable finger = frame.fingers().frontmost(); 
+		Vector direction = finger.direction();
+		Vector sTipPosition = finger.stabilizedTipPosition();
+		float touchDistance = finger.touchDistance();//Distance from touch zone
+		whichQuadrant(touchDistance, direction);
+	}
+	
+	public int whichQuadrant(float distance, Vector direction) {
+		float xDirection = direction.getX();		//X component of vector
+		float yDirection = direction.getY();		//Y component of vector
+		float zDirection = direction.getZ();		//Z component of vector
+		float pitch = direction.pitch();			//Rotation about X axis, radians
+		float roll = direction.roll();				//Rotation about Z axis, radians
+		float yaw = direction.yaw();				//Rotation about Y axis, radians
+		
+		System.out.println("Distance: " + distance);
+		System.out.println("Yaw: " + yaw);
+		System.out.println("Pitch: " + pitch);
+		System.out.println("Roll: " + roll);
+		System.out.println("X: " + xDirection);
+		System.out.println("Y: " + yDirection);
+		System.out.println("Z: "+ zDirection);
+		return 0;
+	}
+	
+	
+	public void onDisconnect(Controller controller) {
+		
+	}
+	
+	public static void main(String[] args) {
+		Leap1 listener = new Leap1();
+		Controller controller = new Controller();
+		controller.addListener(listener);
+		 System.out.println("Press Enter to quit...");
+	        try {
+	            System.in.read();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+		controller.removeListener(listener);
+	}
+
+}

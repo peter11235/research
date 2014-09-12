@@ -1,0 +1,40 @@
+package pete;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Frame;
+import com.leapmotion.leap.Listener;
+import com.leapmotion.leap.Pointable;
+import com.leapmotion.leap.Vector;
+
+public class Leap1 {
+
+	public class LeapListener extends Listener {
+		public void onConnect(Controller controller) {
+			System.out.println("Connected");
+		}
+		
+		public void onFrame(Controller controller) {
+			long lastFrameId = 0;
+	    	Frame frame = controller.frame();
+	    	if (frame.id() == lastFrameId) return;
+	    	processFrame(frame);
+	    	lastFrameId = frame.id();
+		}
+		
+		public Vector processFrame(Frame frame) {
+			Pointable finger = frame.finger(0); 
+			Vector direction = finger.direction();
+			return direction;
+		}
+		
+		public void onDisconnect(Controller controller) {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

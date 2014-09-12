@@ -1,0 +1,21 @@
+package pete;
+
+import com.leapmotion.leap.Listener;
+
+public class Leap1 {
+
+	public class LeapListener extends Listener {
+		public void onConnect() {
+			
+		}
+		public void onDisconnect() {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}
