@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="com.leapmotion.leap.ScreenList"/>
 <fullyQualifiedTypeName name="pete.Leap1"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
@@ -20,5 +19,9 @@
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="com.leapmotion.leap.Listener"/>
+<fullyQualifiedTypeName name="java.awt.GridLayout"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.GestureList"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.Gesture.Type"/>
+<fullyQualifiedTypeName name="com.leapmotion.leap.SwipeGesture"/>
 <fullyQualifiedTypeName name="com.leapmotion.leap.Vector"/>
 </qualifiedTypeNameHistroy>

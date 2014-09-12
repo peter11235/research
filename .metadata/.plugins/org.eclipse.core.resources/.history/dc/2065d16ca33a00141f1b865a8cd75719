@@ -47,7 +47,7 @@ public class LeapScroll extends Listener {
 		GestureList gestures = frame.gestures();
 		for (Gesture gesture : gestures) {
 			if (gesture.type() == Gesture.Type.TYPE_SWIPE) {
-				SwipeGesture swipe = new SwipeGesture(gesture);
+				SwipeGesture swipe = (SwipeGesture) gesture;
 				Vector direction = swipe.direction();
 				float swipeX = direction.getX();
 				float swipeY = direction.getY();
@@ -57,8 +57,8 @@ public class LeapScroll extends Listener {
 	}
 	
 	public void scroll (float x, float y) {
-		if (y > x) {
-			robot.mouseWheel((int)y);
+		if (x > y) {
+			robot.mouseWheel((int)x);
 		}
 	}
 	public void onDisconnect(Controller controller) {

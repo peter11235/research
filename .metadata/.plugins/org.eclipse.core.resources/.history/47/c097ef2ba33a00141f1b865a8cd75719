@@ -1,29 +1,20 @@
 package pete;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.IOException;
 
 import com.leapmotion.leap.Controller;
 import com.leapmotion.leap.Frame;
 import com.leapmotion.leap.Gesture;
-import com.leapmotion.leap.GestureList;
 import com.leapmotion.leap.Listener;
 import com.leapmotion.leap.Screen;
 import com.leapmotion.leap.ScreenList;
-import com.leapmotion.leap.SwipeGesture;
-import com.leapmotion.leap.Vector;
 
 public class LeapScroll extends Listener {
 
 	Robot robot;
 	public LeapScroll () {
-		try {
-			robot= new Robot();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//robot= new Robot();
 	}
 	 
 	public void onConnect (Controller controller) {
@@ -44,22 +35,7 @@ public class LeapScroll extends Listener {
     	lastFrameId = frame.id();
 	}
 	public void processFrame(Frame frame) {
-		GestureList gestures = frame.gestures();
-		for (Gesture gesture : gestures) {
-			if (gesture.type() == Gesture.Type.TYPE_SWIPE) {
-				SwipeGesture swipe = new SwipeGesture(gesture);
-				Vector direction = swipe.direction();
-				float swipeX = direction.getX();
-				float swipeY = direction.getY();
-				scroll(swipeX, swipeY);
-			}
-		}
-	}
-	
-	public void scroll (float x, float y) {
-		if (y > x) {
-			robot.mouseWheel((int)y);
-		}
+		
 	}
 	public void onDisconnect(Controller controller) {
 		

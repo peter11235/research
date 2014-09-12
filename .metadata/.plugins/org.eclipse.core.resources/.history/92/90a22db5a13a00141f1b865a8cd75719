@@ -24,9 +24,6 @@ public class ColorStrip extends JFrame {
 	JPanel seg6;
 	JPanel seg7;
 	
-	Dimension small = new Dimension(100,100);
-	Dimension big = new Dimension(200,200);
-	
 	public ColorStrip() {
 		init();
 	}
@@ -34,7 +31,7 @@ public class ColorStrip extends JFrame {
 	public void init() {
 		segments = new ArrayList();
 		colorStrip = new JPanel(new GridLayout(1,8));
-		colorStrip.setSize(1600,200);
+		colorStrip.setSize(800,100);
 		seg0 = new JPanel();
 		seg1 = new JPanel();
 		seg2 = new JPanel();
@@ -43,24 +40,8 @@ public class ColorStrip extends JFrame {
 		seg5 = new JPanel();
 		seg6 = new JPanel();
 		seg7 = new JPanel();
-		/*
-		seg0.setSize(small);
-		seg1.setSize(small);
-		seg2.setSize(small);
-		seg3.setSize(small);
-		seg4.setSize(small);
-		seg5.setSize(small);
-		seg6.setSize(small);
-		seg7.setSize(small);
-		*/
-		seg0.setSize(big);
-		seg1.setSize(big);
-		seg2.setSize(big);
-		seg3.setSize(big);
-		seg4.setSize(big);
-		seg5.setSize(big);
-		seg6.setSize(big);
-		seg7.setSize(big);
+		
+		
 		
 		segments.add(seg0);
 		segments.add(seg1);
@@ -80,7 +61,7 @@ public class ColorStrip extends JFrame {
 		double screenWidth = screenSize.getWidth();
 		double screenHeight = screenSize.getHeight();
 		this.setContentPane(colorStrip);
-		this.setSize(1600,200);
+		this.setSize(800,100);
 		this.setLocation((int)(.5*screenWidth), (int)(.5 * screenHeight));
 	}
 	
