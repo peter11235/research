@@ -13,8 +13,7 @@ import javax.swing.JPanel;
 public class LeapColor extends JFrame {
 
 	//stuff for dynamic array
-	List<JPanel> segments;
-	JPanel colorStrip;
+	
 	
 	//Stuff for quadrants
 	JPanel colorGrid;
@@ -23,14 +22,7 @@ public class LeapColor extends JFrame {
 	JPanel quad3;
 	JPanel quad4;
 	
-	JPanel seg0;
-	JPanel seg1;
-	JPanel seg2;
-	JPanel seg3;
-	JPanel seg4;
-	JPanel seg5;
-	JPanel seg6;
-	JPanel seg7;
+	
 	
 	List<JPanel> quadrants;
 	
@@ -39,22 +31,7 @@ public class LeapColor extends JFrame {
 	}
 	public void init() {
 		/*
-		segments = new ArrayList();
-		colorStrip = new JPanel(new FlowLayout());
-		segments.add(seg0);
-		segments.add(seg1);
-		segments.add(seg2);
-		segments.add(seg3);
-		segments.add(seg4);
-		segments.add(seg5);
-		segments.add(seg6);
-		segments.add(seg7);
-		
-		for (int i = 0; i < 8; i++) {
-			
-			segments.get(i).setBackground(new Color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256)));
-			colorStrip.add(segments.get(i));
-		}
+
 		*/
 		
 		colorGrid = new JPanel(new GridLayout(2,2));
@@ -124,14 +101,4 @@ public class LeapColor extends JFrame {
 		
 		
 	}
-	/*
-	public void changeColor(int which) {
-		segments.get(which).setBackground(Color.GREEN);
-		for (int i = 0; i < 8; i++) {
-			if (i != which) {
-				segments.get(i).setBackground(new Color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256)));
-			}
-		}
-	}
-	*/
 }

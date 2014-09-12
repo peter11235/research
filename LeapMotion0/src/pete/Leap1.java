@@ -123,42 +123,7 @@ public class Leap1 extends Listener {
 		System.out.println("Quad: "+quadrant);
 		return quadrant;
 	}
-	/*
-	public int whichSegment(Pointable pointer) {
-		float tipX = pointer.tipPosition().getX();
-		float tipY = pointer.tipPosition().getY();
-		float tipZ = pointer.tipPosition().getZ();
-		
-		//Each segment = 40 "milimeters" (by tipPos) if 8 segments
-		if (tipX < -120) {
-			return 0;
-		}
-		else if (tipX < -80) {
-			return 1;
-		}
-		else if (tipX < -40) {
-			return 2;
-		}
-		else if (tipX < 0) {
-			return 3;
-		}
-		else if (tipX < 40) {
-			return 4;
-		}
-		else if (tipX < 80) {
-			return 5;
-		}
-		else if (tipX < 120) {
-			return 6;
-		}
-		else if (tipX <=160) {
-			return 7; 
-		}
-			
-		
-		return 0;
-	}
-	*/
+	
 	public void onDisconnect(Controller controller) {
 		
 	}
