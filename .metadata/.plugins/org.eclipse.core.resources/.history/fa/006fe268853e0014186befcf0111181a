@@ -20,7 +20,6 @@ public class Leap2 extends Listener{
 
 	ColorStrip colorStrip;
 	Synthesizer synth;
-	int lastNote = -1;
 	public Leap2() {
 		colorStrip = new ColorStrip();
 		colorStrip.setVisible(true);
@@ -88,7 +87,6 @@ public class Leap2 extends Listener{
 	}
 	
 	public void playSound(int which) {
-		
 		int note = 60;
 		//This makes notes follow C-major scale
 		switch (which){
@@ -119,18 +117,15 @@ public class Leap2 extends Listener{
 		}
 		synth = null;
 		int velocity = 75;
-		int duration = 125;
+		int duration = 25;
 		try {
 			synth = MidiSystem.getSynthesizer();
 			synth.open();
-			MidiChannel[] channels = synth.getChannels();
-			System.out.println(""+channels.length);
-			MidiChannel channel = channels[0];
-			if (note != lastNote)
-			channels[which].noteOn(note, velocity);
-			lastNote = note;
+			MidiChannel[] chanels = synth.getChannels();
+			MidiChannel channel = chanels[0];
+			channel.noteOn(note, velocity);
 			Thread.sleep(duration);
-			//channels[which].noteOff(note);
+			channel.noteOff(note);
 		}
 		catch(MidiUnavailableException e) {
 			System.out.println("Midi unavailable");
@@ -140,8 +135,7 @@ public class Leap2 extends Listener{
 			e.printStackTrace();
 		}
 		finally {
-			//synth.close();
-			//leave this out to allow multiple notes to play
+			synth.close();
 		}
 	}
 	public static void main(String[] args) {

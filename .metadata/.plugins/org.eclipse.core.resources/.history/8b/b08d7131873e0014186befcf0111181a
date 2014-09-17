@@ -141,7 +141,7 @@ public class Leap2 extends Listener{
 		}
 		finally {
 			//synth.close();
-			//leave this out to allow multiple notes to play
+			
 		}
 	}
 	public static void main(String[] args) {

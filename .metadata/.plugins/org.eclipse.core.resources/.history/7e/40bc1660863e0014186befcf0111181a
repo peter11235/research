@@ -119,7 +119,7 @@ public class Leap2 extends Listener{
 		}
 		synth = null;
 		int velocity = 75;
-		int duration = 125;
+		int duration = 25;
 		try {
 			synth = MidiSystem.getSynthesizer();
 			synth.open();
@@ -130,7 +130,8 @@ public class Leap2 extends Listener{
 			channels[which].noteOn(note, velocity);
 			lastNote = note;
 			Thread.sleep(duration);
-			//channels[which].noteOff(note);
+			
+			channels[which].noteOff(note);
 		}
 		catch(MidiUnavailableException e) {
 			System.out.println("Midi unavailable");
@@ -140,8 +141,7 @@ public class Leap2 extends Listener{
 			e.printStackTrace();
 		}
 		finally {
-			//synth.close();
-			//leave this out to allow multiple notes to play
+			synth.close();
 		}
 	}
 	public static void main(String[] args) {
