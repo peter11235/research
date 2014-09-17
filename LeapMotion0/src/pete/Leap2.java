@@ -10,10 +10,16 @@ import com.leapmotion.leap.Screen;
 import com.leapmotion.leap.ScreenList;
 import com.leapmotion.leap.Vector;
 
+//sound imports
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.Synthesizer;
+import javax.sound.midi.MidiChannel;
+import javax.sound.midi.MidiUnavailableException;
+
 public class Leap2 extends Listener{
 
 	ColorStrip colorStrip;
-	
+	Synthesizer synth;
 	public Leap2() {
 		colorStrip = new ColorStrip();
 		colorStrip.setVisible(true);
@@ -37,6 +43,7 @@ public class Leap2 extends Listener{
 	public void processFrame(Frame frame) {
 		Pointable finger = frame.fingers().frontmost(); 
 		int which = whichSegment(finger);
+		playSound(which);
 		colorStrip.changeColor(which);
 	}
 	
@@ -79,6 +86,58 @@ public class Leap2 extends Listener{
 		return segment;
 	}
 	
+	public void playSound(int which) {
+		int note = 60;
+		//This makes notes follow C-major scale
+		switch (which){
+			case 0:
+				note=60;
+				break;
+			case 1:
+				note=62;
+				break;
+			case 2:
+				note=64;
+				break;
+			case 3:
+				note=65;
+				break;
+			case 4:
+				note = 67;
+				break;
+			case 5:
+				note=69;
+				break;
+			case 6:
+				note=71;
+				break;
+			case 7:
+				note=72;
+				break;
+		}
+		synth = null;
+		int velocity = 50;
+		int duration = 25;
+		try {
+			synth = MidiSystem.getSynthesizer();
+			synth.open();
+			MidiChannel[] chanels = synth.getChannels();
+			MidiChannel channel = chanels[0];
+			channel.noteOn(note, velocity);
+			Thread.sleep(duration);
+			channel.noteOff(note);
+		}
+		catch(MidiUnavailableException e) {
+			System.out.println("Midi unavailable");
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			System.out.println("Interrupted");
+			e.printStackTrace();
+		}
+		finally {
+			synth.close();
+		}
+	}
 	public static void main(String[] args) {
 		Leap2 listener = new Leap2();
 		Controller controller = new Controller();

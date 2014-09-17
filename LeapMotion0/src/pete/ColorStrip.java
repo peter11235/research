@@ -79,6 +79,7 @@ public class ColorStrip extends JFrame {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		double screenWidth = screenSize.getWidth();
 		double screenHeight = screenSize.getHeight();
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setContentPane(colorStrip);
 		this.setSize(1600,200);
 		this.setLocation((int)(.5*screenWidth), (int)(.5 * screenHeight));
@@ -89,6 +90,11 @@ public class ColorStrip extends JFrame {
 	}
 	
 	public void changeColor(int which) {
-		segments.get(which).setBackground(newRandomColor());
+		if (which == -1) {
+			//do nothing
+		}
+		else {
+			segments.get(which).setBackground(newRandomColor());
+		}
 	}
 }

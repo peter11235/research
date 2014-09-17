@@ -1,0 +1,127 @@
+package pete;
+
+import java.io.IOException;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Frame;
+import com.leapmotion.leap.Listener;
+import com.leapmotion.leap.Pointable;
+import com.leapmotion.leap.Screen;
+import com.leapmotion.leap.ScreenList;
+import com.leapmotion.leap.Vector;
+
+//sound imports
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.Synthesizer;
+import javax.sound.midi.MidiChannel;
+import javax.sound.midi.MidiUnavailableException;
+
+public class Leap2 extends Listener{
+
+	ColorStrip colorStrip;
+	Synthesizer synth;
+	public Leap2() {
+		colorStrip = new ColorStrip();
+		colorStrip.setVisible(true);
+	}
+	public void onConnect(Controller controller) {
+		System.out.println("Connected");
+	}
+	
+	public void onFrame(Controller controller) {
+		long lastFrameId = 0;
+    	Frame frame = controller.frame();
+    	if (frame.id() == lastFrameId) return;
+    	processFrame(frame);
+    	ScreenList screenList = controller.locatedScreens();
+    	Screen screen;
+    	if (!screenList.isEmpty()) screen = screenList.get(0);
+    	lastFrameId = frame.id();
+	
+	}
+	
+	public void processFrame(Frame frame) {
+		Pointable finger = frame.fingers().frontmost(); 
+		int which = whichSegment(finger);
+		playSound(which+60);
+		colorStrip.changeColor(which);
+	}
+	
+	public void onDisconnect(Controller controller) {
+		System.out.println("Disconnected");
+	}
+	public int whichSegment(Pointable pointer) {
+		Vector tipPosition = pointer.tipPosition();
+		float tipX = tipPosition.getX();
+		float tipY = tipPosition.getY();
+		float tipZ = tipPosition.getZ();
+		int segment= -1;
+		
+		//Each segment = 40 "milimeters" (by tipPos) if 8 segments
+		if (tipX < -120) {
+			segment = 0;
+		}
+		else if (tipX < -80) {
+			segment =1;
+		}
+		else if (tipX < -40) {
+			segment = 2;
+		}
+		else if (tipX < 0) {
+			segment = 3;
+		}
+		else if (tipX < 40) {
+			segment = 4;
+		}
+		else if (tipX < 80) {
+			segment = 5;
+		}
+		else if (tipX < 120) {
+			segment = 6;
+		}
+		else if (tipX <=160) {
+			segment = 7; 
+		}
+		
+		return segment;
+	}
+	
+	public void playSound(int which) {
+		synth = null;
+		int velocity = 50;
+		int duration = 25;
+		try {
+			synth = MidiSystem.getSynthesizer();
+			synth.open();
+			MidiChannel[] chanels = synth.getChannels();
+			MidiChannel channel = chanels[0];
+			channel.noteOn(which, velocity);
+			Thread.sleep(duration);
+			channel.noteOff(which);
+		}
+		catch(MidiUnavailableException e) {
+			System.out.println("Midi unavailable");
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			System.out.println("Interrupted");
+			e.printStackTrace();
+		}
+		finally {
+			synth.close();
+		}
+	}
+	public static void main(String[] args) {
+		Leap2 listener = new Leap2();
+		Controller controller = new Controller();
+		controller.addListener(listener);
+
+		System.out.println("Press Enter to quit...");
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        controller.removeListener(listener);
+	}
+
+}
