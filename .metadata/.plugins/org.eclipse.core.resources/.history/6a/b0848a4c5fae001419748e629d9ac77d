@@ -1,0 +1,89 @@
+package soundgrid;
+
+import java.awt.Point;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Frame;
+import com.leapmotion.leap.Listener;
+import com.leapmotion.leap.Pointable;
+import com.leapmotion.leap.PointableList;
+import com.leapmotion.leap.Vector;
+
+public class DrumController extends Listener{
+	
+	private PointableList drumsticks;
+	private final float HIT_VELOCITY = 50f;
+	private SoundBoard drumset;
+	
+	public void onConnect()
+	{
+		System.out.println("Connected");
+	}
+	
+	public void onFrame(Controller controller)
+	{
+		long lastFrameId = 0;
+    	Frame frame = controller.frame();
+    	if (frame.id() == lastFrameId) return;
+    	processFrame(frame);
+    	lastFrameId = frame.id();
+	}
+	
+	public void processFrame(Frame frame)
+	{
+		drumsticks = frame.pointables();
+		for (Pointable drumstick : drumsticks)
+		{
+			if (drumstick.tipVelocity().magnitude() >= HIT_VELOCITY)
+			{
+				
+			}
+		}
+	}
+	
+	public Point whichSound(Pointable p){
+		Vector v = p.tipPosition();		
+		return new Point(getRow(v), getCol(v));
+	}
+	
+	public int getRow(Vector v)
+	{
+		if (v.getX() <= 60)
+		{
+			if (v.getX() <= -60)
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+		else{
+			return 2;
+		}
+	}
+	public int getCol(Vector v)
+	{
+		if (v.getY() <= 233.3)
+		{
+			if (v.getX() <= 166.7)
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+		else{
+			return 2;
+		}
+	}
+	
+	public void onDisconnect()
+	{
+		System.out.println("Connected");
+	}
+	
+}

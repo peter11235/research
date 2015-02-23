@@ -1,0 +1,58 @@
+The Potential of Kinect in Education
+by Hui-mei Justina Hsu
+
+versimilitude: realness
+
+2010 & 2011 Horizon report predicts gesture-recognition tech will be adopted in education w/in 5 yrs. (now)
+
+IRF -> surface interactivity
+
+Interactivity w/ ICT:
+  1. No Interactivity: ICT simply presents contents
+  2. Authoritative: students controlled by predetermined responses and fixed procedures
+  3. Dialectic: Allow studentes more freedom of interaction
+  4. Dialogic: ""
+  5. Synergistic: ""
+  
+3 Primary modes of learning: Visual, Auditory, Kinesthetic
+  - Theory of Multiple intelligences 
+  
+
+
+Role of haptic feedback:
+  - Claimed to have positive impact on learning
+  - 5-yr-olds learning phonetics by tracing words while pronouncing and looking at them
+  - College students w/ disabilities use Wii (tennis) and Kinect (bowling) to improve real-world performance
+  
+Kinect can do anything IWB can do
+
+Six themes from which IWBs derive benefits:
+  1. Flexibility/versitility
+  2. Multimedia presentation
+  3. Efficiency
+  4. Support of planning and dev of resources
+  5. Modeling ICT skills
+  6. Interactivity
+  
+#6 is most valuable
+
+Characteristics of Kinect that make it conducive to teaching/learning:
+  1. Flexible b/c don't need physical input device (keyboard, joystick)
+  2. Accomodates multiple users
+  3. Versitile (kind of same as #1) 
+  4. Engaging
+  
+Affordances:
+  1. stimulating & realistic -> motivating
+  2. Can interact via 3 primary modes of learning: vis, aud, kin.
+  3. Collects lots of data that can be used in software apps (like Scratch and MMD)
+  
+Technical Constraints:
+  1. Space: need a lot of it
+  2. Calibration: takes time, multiple users complicates things
+  3. Few software apps
+
+Future work:
+  - "Customized software to facilitate classroom interactions and to create kinect-enabled contents seems to be missing in the picture of current technology integration"
+  - "Software needs to incorporate the design of interactive pedagogy in order to exploit its technical interactivity"
+  

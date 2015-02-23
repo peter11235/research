@@ -1,0 +1,6 @@
+package soundgrid;
+
+public interface Drum {
+
+	public void play();
+}

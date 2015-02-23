@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MidiPlayer.java&apos; to &apos;LeapMotion1/src/pointee&apos;&#x0A;- Original project: &apos;LeapMotion0&apos;&#x0A;- Destination element: &apos;LeapMotion1/src/pointee&apos;&#x0A;- Original element: &apos;pete1.MidiPlayer.java&apos;" description="Copy compilation unit" destination="=LeapMotion1/src&lt;pointee" element1="/src&lt;pete1{MidiPlayer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1421788937761" units="1" version="1.0"/>
+</session>

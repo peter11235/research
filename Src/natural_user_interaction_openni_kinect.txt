@@ -1,0 +1,31 @@
+Teaching Natural User Interaction using OpenNI and the Microsoft Kinect Sensor
+by Norman Villaroman, Dale Rowe, Bret Swan
+
+HCI: Human-Computer Ineraction
+
+OpenNI: Open Natural Interaction:  libraries for processing Kinect data; C/C++ as well as wrappers
+
+Light Coding: technology used by kinect to gather 3d depth maps.
+
+Structured Light: light in a known pattern of pixels that is projected on a region to gather 3D info
+
+Advantages of Kinect w/ OpenNI:
+  1. Great detail
+  2. Real-time
+  3. Low cost
+  4. Engaging - requires greater level of involvement by user
+  5. Cross-platform 
+  6. Open Source, Stable, good documentation
+  
+NITE middleware includes:
+  1. Recognition of push, steady, swipes, waves, other gestures
+  2. Skeleton detection, tracking individual joints
+  3. Pose detection, 
+  4. User segmentation and Multiple user detection
+  5. Access to depth and video data
+  6. multiple point tracking
+  7. calibration, smoothing functions
+  8. sample apps
+  
+
+

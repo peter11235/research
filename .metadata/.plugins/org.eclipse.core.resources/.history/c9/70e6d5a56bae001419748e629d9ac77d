@@ -1,0 +1,15 @@
+package soundgrid;
+
+import com.leapmotion.leap.Controller;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ImageGrid img = new ImageGrid();
+		DrumController drumController = new DrumController();
+		Controller controller = new Controller();
+		controller.addListener(drumController);
+
+	}
+
+}

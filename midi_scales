@@ -1,0 +1,36 @@
+private int[][] aNotes = { { 8, 10, 12, 13, 15, 17, 19 }, //A = 0
+			{ 9, 11, 12, 14, 16, 18, 19 } };					//A_MINOR=1
+
+	private int[][] bNotes = { { 11, 13, 15, 16, 18, 20, 22 },	//B=2
+			{ 11, 13, 14, 16, 18, 20, 21 } };					//B_MINOR=3
+
+	private int[][] cNotes = { { 0, 2, 4, 5, 7, 9, 11 },		//C=4
+			{ 0, 2, 3, 5, 7, 9, 10 } };							//C_MINOR=5
+
+	private int[][] dNotes = { { 2, 4, 6, 7, 9, 11, 13 },		//D=6
+			{ 2, 4, 5, 7, 9, 11, 12 } };						//D minor=7
+
+	private int[][] eNotes = { { 4, 6, 8, 9, 11, 13, 15 },		//E=8
+			{ 4, 6, 7, 9, 11, 13, 14 } };						//E minor=9
+
+	private int[][] fNotes = { { 5, 7, 9, 10, 12, 14, 16 },		//F=10
+			{ 5, 7, 8, 10, 12, 14, 15 } };						//Fminor=11
+
+	private int[][] gNotes = { { 7, 9, 11, 12, 14, 16, 18 },	//G=12
+			{ 7, 9, 10, 12, 14, 16, 17 } };						//Gminor=13
+
+	private int[][] aFlatNotes = { { 8, 10, 12, 13, 15, 17, 19 },//Aflat=14
+			{ 8, 10, 11, 13, 15, 17, 18 } };						//AFlat minor=15
+
+	private int[][] bFlatNotes = { { 10, 12, 14, 15, 17, 19, 21 },	//bflat=16
+			{ 10, 12, 13, 15, 17, 19, 20 } };						//bflat minor=17
+
+	private int[][] dFlatNotes = { { 1, 3, 5, 6, 8, 10, 12 },		//dflat=18
+			{ 1, 3, 4, 6, 8, 10, 11 } };							//dflat minor=19
+
+	private int[][] eFlatNotes = { { 3, 5, 7, 8, 10, 12, 14 },		//eflat=20
+			{ 3, 5, 6, 8, 10, 12, 13 } };							//eflat minor21
+
+	private int[][] gFlatNotes = { { 6, 8, 10, 11, 13, 15, 17 },	//gflat22
+			{ 6, 8, 9, 11, 13, 15, 16 } };							//gflat minor23
+

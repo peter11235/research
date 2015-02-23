@@ -1,0 +1,47 @@
+The Futre of Computer-based Interactive Technology... Issues Relating to Research and Practice.
+by John Langone, Tom J. Clees, Lloyd Rieber, Michael Matzko
+
+  
+  Generalization: the ability to apply skills acquired in one context to an appropriate situation in a different context.
+  Stimulus generalization: "transfer of acquired skills from training to non-training settings"
+  
+  Situatated learning: learning occurs in same context in which is applied (realistic settings)
+  
+  Anchored instruction: learning structured in such a way that knowledge must be used to solve problems
+  
+  Constructivism: Piaget's theory about constructing new knowledge from experiences using:
+    - Assimilation: new experience incorporated into existing mental framework without changing that framework
+    - Accomodation: new experience leads to reframing of mental framework; example: learning from mistakes 
+  
+  Common stimuli: instructional stimuli that are identical to real-world stimuli
+  
+  Microworld: environment that allows "learners to participate in a domain to the point that they experience the information within meaningful contexts"
+
+  Simulation: mimics real or imaginary system
+  
+  Effectiveness of educational simulation dependent on:
+    1. Underrlying model: subject matter
+    2. Instructional overlay: feedback/guidance 
+    3. Scenario: situation in which sim takes place
+  
+  Multiple stimulus exemplars: multiple different stumuli that cue same target response (e.g. different fonts to teach what "A" looks like)
+  
+  Video-based instruction can have generalized effects, especially when paired w/ interactive component
+  
+  Recommendations for maximum generalization:
+    1. Using common physical stimuli
+    2. using common social stimuli
+    3. using many examples of varied stimuli (multiple exemplars)
+    4. using many examples of correct responses
+    5. using natural contingencies (e.g. producing correct change to buy soda -> new can of soda)
+   
+  "No cielings, no floors" : should be accessible/enjoyable for least challenged to most challenged
+  
+  Research Questions with regard to SHOP package:
+    1. Knowledge and performance competencies in school and home-based instruction
+    2. Generalization of skills to real-world settings
+    3. Generalization of incidentally acquired skills (word recognition from labels)
+    
+  Main idea: promote generalization using interactive computer-based multimedia 
+  
+  Obstacles: different teachers have different styles.

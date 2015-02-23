@@ -18,8 +18,11 @@ import javax.sound.midi.MidiUnavailableException;
 
 public class Leap2 extends Listener{
 
-	ColorStrip colorStrip;
-	Synthesizer synth;
+	private ColorStrip colorStrip;
+	private Synthesizer synth;
+	private boolean keyPressed = false;
+	private final static int zThreshold = 20;
+	
 	int lastNote = -1;
 	public Leap2() {
 		colorStrip = new ColorStrip();
@@ -57,6 +60,15 @@ public class Leap2 extends Listener{
 		float tipY = tipPosition.getY();
 		float tipZ = tipPosition.getZ();
 		int segment= -1;
+		
+		//is key pressed?
+		if (tipZ < zThreshold) 
+		{
+			keyPressed = true;
+		}
+		else if (tipZ >= zThreshold) {
+			keyPressed = false;
+		}
 		
 		//Each segment = 40 "milimeters" (by tipPos) if 8 segments
 		if (tipX < -120) {
@@ -124,10 +136,16 @@ public class Leap2 extends Listener{
 			synth = MidiSystem.getSynthesizer();
 			synth.open();
 			MidiChannel[] channels = synth.getChannels();
-			System.out.println(""+channels.length);
+			//System.out.println(""+channels.length);
 			MidiChannel channel = channels[0];
-			if (note != lastNote)
-			channels[which].noteOn(note, velocity);
+			if (note != lastNote && keyPressed)
+			{
+				channels[0].noteOn(note, velocity);
+			}
+			else
+			{
+				channels[0].allSoundOff();
+			}
 			lastNote = note;
 			Thread.sleep(duration);
 			//channels[which].noteOff(note);

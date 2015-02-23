@@ -1,0 +1,14 @@
+Examples of interactive technology in current research:
+
+  - IWB's - smartboard
+    - flexibility/versitility
+    - multimidia presentation
+    - efficiency, 
+    - supporting planning and dev of resources
+    
+  - Kinect 
+    - WinandI interface for windows
+    - bowling and other games
+    - 
+  - Wii tennis
+  - 

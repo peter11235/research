@@ -1,0 +1,6 @@
+package soundgrid;
+
+public abstract class Drum {
+
+	public abstract void play();
+}

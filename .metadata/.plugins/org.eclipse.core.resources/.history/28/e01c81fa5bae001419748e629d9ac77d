@@ -1,0 +1,20 @@
+package soundgrid;
+
+import javax.sound.midi.Instrument;
+import javax.sound.midi.Synthesizer;
+
+public class SoundBoard {
+
+	private Synthesizer synth;
+	private Instrument[][] drumset;
+	
+	public SoundBoard()
+	{
+		
+	}
+	
+	public void setUpSound()
+	{
+		
+	}
+}

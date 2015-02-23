@@ -1,0 +1,5 @@
+package soundgrid;
+
+public abstract class Drum {
+
+}

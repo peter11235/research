@@ -1,0 +1,15 @@
+package soundgrid;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Drumset drumset = new Drumset();
+		
+		for (int i = 0; i < 10; i++)
+		{
+			drumset.snare(10);
+		}
+
+	}
+
+}

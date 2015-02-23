@@ -1,0 +1,17 @@
+package soundgrid;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ImageGrid extends JFrame {
+
+	private JPanel[][] iconContainers;
+	private ImageIcon[][] icons;
+	
+	
+	public ImageGrid( )
+	{
+		
+	}
+}

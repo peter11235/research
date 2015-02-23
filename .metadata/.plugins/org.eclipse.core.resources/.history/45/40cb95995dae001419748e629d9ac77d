@@ -1,0 +1,29 @@
+package soundgrid;
+
+import javax.sound.midi.MidiChannel;
+
+public class Drumset extends SoundBoard {
+
+	private final short snare1 = 38;
+	private final short snare2 = 40;
+	private final short rimshot = 37;
+	private final short bass1 = 36;
+	private final short bass2 = 35;
+	private final short lowTom2 = 41;
+	private final short midTom2 = 45;
+	private final short closetHH = 42;
+	private final short openHH = 46;
+	private final short crash = 49;
+	private final short ride = 51;
+	
+	
+	private MidiChannel percussionChannel;
+	
+	public Drumset()
+	{
+		super();
+		percussionChannel = channels[10];
+	}
+	
+	
+}
