@@ -1,0 +1,24 @@
+package drumset2;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		MidiPlayer player = new MidiPlayer();
+		/*/
+		ArrayList<String> s = player.getInstrumentNames();
+		
+		for (int i = 0; i < s.size(); ++i)
+		{
+			System.out.println(i+"_"+s.get(i));
+		}
+		*/
+		player.setInstrument("Drumkit: Standard Kit preset #0");
+		for (int j = 35; j <= 81; ++j)
+		{
+			player.playSound(j, 10);
+		}
+	}
+
+}

@@ -13,7 +13,6 @@ import com.leapmotion.leap.Vector;
 
 public class LeapListener extends Listener{
 
-	
 	private final static int zThreshold = 40;
 	private boolean keyPressed = false;
 	private LeapController controller;
@@ -131,4 +130,5 @@ public class LeapListener extends Listener{
 			return -1;
 		}
 	}
+	
 }

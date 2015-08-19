@@ -1,0 +1,6 @@
+package drumset2;
+
+public interface ModelInterface {
+
+	public void addObserver(ViewInterface)
+}

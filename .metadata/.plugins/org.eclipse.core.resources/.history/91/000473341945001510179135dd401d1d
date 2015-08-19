@@ -1,0 +1,33 @@
+package drumset2;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Listener;
+
+public class DrumLeapListener extends Listener {
+
+	public void onConnect()
+	{
+		
+	}
+	
+	public void onFrame(Controller arg)
+	{
+		
+		
+	}
+	
+	public void processFrame()
+	{
+		
+	}
+	
+	public Location getLocation()
+	{
+		
+	}
+	
+	public void onDisconnect(Controller arg)
+	{
+		
+	}
+}

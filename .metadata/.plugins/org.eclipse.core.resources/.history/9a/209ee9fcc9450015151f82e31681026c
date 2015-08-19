@@ -1,0 +1,5 @@
+package drumset2;
+
+public interface DrumObserver {
+
+}

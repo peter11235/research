@@ -1,0 +1,48 @@
+package drumset2;
+
+public class DrumPlayer extends MidiPlayer {
+
+	
+	public DrumPlayer(DrumController aDrumController)
+	{
+		super();
+	}
+	
+public void playSound(final int note, final int channel) {
+		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if (note >= 0) {
+					
+					if (lastNote != note) {
+						channels[channel].noteOn(note, VELOCITY);
+						lastNote = note;
+						
+						try {
+							Thread.sleep(DURATION);
+						} catch (InterruptedException e) {
+
+							e.printStackTrace();
+						}
+						
+					}
+				} else {
+					soundOff(channel);
+				}
+				
+			}
+			
+		}).start();
+		
+	}
+
+	public void soundOff(int channel) {
+
+		channels[channel].noteOff(lastNote);
+		channels[channel].allNotesOff();
+		channels[channel].allSoundOff();
+
+	}
+
+}

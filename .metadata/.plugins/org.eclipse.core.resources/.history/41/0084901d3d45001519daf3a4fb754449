@@ -1,0 +1,10 @@
+package drumset2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		MidiPlayer player = new MidiPlayer();
+		
+	}
+
+}

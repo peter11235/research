@@ -1,0 +1,77 @@
+package drumset2;
+
+import java.util.ArrayList;
+
+import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Vector;
+
+public class DrumController implements DrumObserver {
+
+	private int numDrums = 4;
+	private float hitThreshold = 10f;
+	private DrumLeapListener list;
+	private Controller controller;
+	private DrumGui gui;
+	private DrumPlayer player;
+	private Drum[] drums;
+	private int c = 0;//index of drum being configured
+	private int currentSound;
+	
+	public DrumController()
+	{
+		list = new DrumLeapListener();
+		controller = new Controller();
+		list.addObserver(this);
+		controller.addListener(list);
+		gui = new DrumGui(this);
+		drums = new Drum[numDrums];
+	}
+	
+	public void setPlayMode(boolean b)
+	{
+		list.playMode = b;
+		if (b) gui.switchToPlayMode();
+	}
+	
+	public void okPressed(int sound)
+	{
+		currentSound = sound;
+		Vector l = list.currentLocation;
+		addDrum(sound, l);
+		if (c >= numDrums -1)
+		{
+			setPlayMode(true);
+		}
+		System.out.println("C: " + c);
+	}
+	
+	public int getNumDrums()
+	{
+		return numDrums;
+	}
+	
+	public void addDrum(int sound, Vector location)
+	{
+		if (c < numDrums)
+		{
+			drums[c] = new Drum(sound, location);
+			++c;
+			System.out.print("Added Drum " + sound + " at " + location.toString());
+		}
+		
+	}
+	
+
+	@Override
+	public void update(DrumObservable d, Object arg) {
+		Vector hitPosition = (Vector) arg;
+		for (Drum drum: drums)
+		{
+			if (drum.location.distanceTo(hitPosition) < hitThreshold)
+			{
+				player.playDrum(drum.sound);
+			}
+		}
+	}
+	
+}
