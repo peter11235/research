@@ -14,7 +14,6 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -129,20 +128,6 @@ public class DrumGui extends JFrame {
 		dropDown.addActionListener(new DropDownListener());
 	}
 	
-	public int getNumDrums()
-	{
-		int i;
-		
-		i = Integer.parseInt(JOptionPane.showInputDialog(null, 
-				"Enter the number of drums up to 4.", "Number of Drums", 
-				JOptionPane.PLAIN_MESSAGE).trim());
-		
-		if (i < 1|| i >4 )
-			i = 1;
-		
-		return i;
-	}
-	
 	private void updateLabel()
 	{
 		if (c < numDrums)
@@ -185,11 +170,10 @@ public class DrumGui extends JFrame {
 		setUpPanels();
 		
 		this.setSize(dimension);
-		this.setLocation(600, 400);
 		this.setContentPane(mainPanel);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		//this.setVisible(true);
+		this.setVisible(true);
 	}
 	
 	protected class ButtonListener implements ActionListener

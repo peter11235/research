@@ -185,11 +185,10 @@ public class DrumGui extends JFrame {
 		setUpPanels();
 		
 		this.setSize(dimension);
-		this.setLocation(600, 400);
 		this.setContentPane(mainPanel);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		//this.setVisible(true);
+		this.setVisible(true);
 	}
 	
 	protected class ButtonListener implements ActionListener

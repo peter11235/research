@@ -29,11 +29,8 @@ public class DrumController implements DrumObserver {
 		gui = new DrumGui(this);
 		numDrums = gui.getNumDrums();
 		drums = new Drum[numDrums];
-		gui.setVisible(true);
-		if (numDrums == 1)
-		{
-			distanceThreshold = 300f;
-		}
+		
+		
 	}
 	
 	public void go(){

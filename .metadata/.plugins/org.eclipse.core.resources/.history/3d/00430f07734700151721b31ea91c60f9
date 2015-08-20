@@ -19,7 +19,7 @@ public class DrumLeapListener extends Listener implements DrumObservable {
 	private Pointable right;
 	private Pointable frontmost;
 	boolean playMode = false;
-	float threshold = 2f;
+	float threshold = 2.75f;
 	public Vector currentLocation;
 	
 	private boolean hit = false;

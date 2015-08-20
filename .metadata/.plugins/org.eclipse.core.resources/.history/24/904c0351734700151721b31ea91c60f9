@@ -8,15 +8,15 @@ import com.leapmotion.leap.Vector;
 
 public class DrumController implements DrumObserver {
 
-	private int numDrums = 1;
-	private float distanceThreshold = 60f;
+	private int numDrums = 4;
+	private float hitThreshold = 30f;
 	private DrumLeapListener list;
 	private Controller controller;
 	private DrumGui gui;
 	private DrumPlayer player;
 	private Drum[] drums;
 	private int c = 0;//index of drum being configured
-	private boolean singleDrumMode = false;
+	private int currentSound;
 	
 	public DrumController()
 	{
@@ -27,13 +27,9 @@ public class DrumController implements DrumObserver {
 		list.addObserver(this);
 		
 		gui = new DrumGui(this);
-		numDrums = gui.getNumDrums();
 		drums = new Drum[numDrums];
-		gui.setVisible(true);
-		if (numDrums == 1)
-		{
-			distanceThreshold = 300f;
-		}
+		
+		
 	}
 	
 	public void go(){
@@ -55,6 +51,7 @@ public class DrumController implements DrumObserver {
 	
 	public void okPressed(int sound)
 	{
+		currentSound = sound;
 		Vector l = list.currentLocation;
 		addDrum(sound, l);
 		if (c >= numDrums)
@@ -95,7 +92,7 @@ public class DrumController implements DrumObserver {
 		{
 			//System.out.println(""+drum.location.distanceTo(hitPosition));
 			
-			if (drum.location.distanceTo(hitPosition) < distanceThreshold)
+			if (drum.location.distanceTo(hitPosition) < hitThreshold)
 			{
 				//player.playDrum(drum.sound);
 				drum.play();
