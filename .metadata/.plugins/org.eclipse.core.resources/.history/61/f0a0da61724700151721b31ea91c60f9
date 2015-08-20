@@ -9,7 +9,7 @@ import com.leapmotion.leap.Vector;
 public class DrumController implements DrumObserver {
 
 	private int numDrums = 4;
-	private float hitThreshold = 30f;
+	private float hitThreshold = 40f;
 	private DrumLeapListener list;
 	private Controller controller;
 	private DrumGui gui;

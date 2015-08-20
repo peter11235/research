@@ -19,7 +19,7 @@ public class DrumLeapListener extends Listener implements DrumObservable {
 	private Pointable right;
 	private Pointable frontmost;
 	boolean playMode = false;
-	float threshold = 2.75f;
+	float threshold = 3.5f;
 	public Vector currentLocation;
 	
 	private boolean hit = false;
@@ -53,7 +53,6 @@ public class DrumLeapListener extends Listener implements DrumObservable {
 		frontmost = frame.pointables().frontmost();
 		if (playMode)
 		{
-			//One thread for each Pointable in order to be able to play 2 drums at once.
 			new Thread(new Runnable()
 			{
 
