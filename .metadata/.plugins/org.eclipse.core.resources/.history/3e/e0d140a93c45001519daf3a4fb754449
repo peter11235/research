@@ -1,6 +1,0 @@
-package drumset2;
-
-public class DrumPlayer extends MidiPlayer {
-
-	
-}

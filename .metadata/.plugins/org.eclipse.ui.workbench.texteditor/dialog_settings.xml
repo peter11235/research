@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="245" key="DIALOG_WIDTH"/>
-		<item value="134" key="DIALOG_Y_ORIGIN"/>
-		<item value="408" key="DIALOG_HEIGHT"/>
-		<item value="489" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="true" key="wrap"/>
 		<item value="false" key="isRegEx"/>
-		<item value="false" key="casesensitive"/>
+		<item value="cmdToFunctor" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
-		<item value="z" key="selection"/>
 		<list key="findhistory">
+			<item value="btnToFunctor"/>
+			<item value="buttonHeight"/>
+			<item value="buttonWidth"/>
+			<item value="functors"/>
+			<item value="context"/>
+			<item value="hitThreshold"/>
+			<item value="hitTreshold"/>
 			<item value="x"/>
 		</list>
 		<list key="replacehistory">
+			<item value="cmdToFunctor"/>
+			<item value="bigButtonHeight"/>
+			<item value="bigButtonWidth"/>
+			<item value="guiFunctors"/>
+			<item value="kinect"/>
+			<item value="distanceThreshold"/>
 			<item value="z"/>
 			<item value="y"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="289" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="432" key="DIALOG_HEIGHT"/>
+		<item value="336" key="DIALOG_Y_ORIGIN"/>
+		<item value="734" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>
