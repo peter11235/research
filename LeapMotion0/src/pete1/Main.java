@@ -6,7 +6,8 @@ import com.leapmotion.leap.Controller;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void go()
+	{
 		LeapListener listener = new LeapListener();
 		Controller controller = new Controller();
 		controller.addListener(listener);
@@ -18,6 +19,10 @@ public class Main {
             e.printStackTrace();
         }
         controller.removeListener(listener);
+	}
+	
+	public static void main(String[] args) {
+		go();
 	}
 
 }
