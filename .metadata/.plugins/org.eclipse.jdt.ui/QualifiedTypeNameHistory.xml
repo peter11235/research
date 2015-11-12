@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Observer"/>
-<fullyQualifiedTypeName name="javax.sound.midi.Instrument"/>
-<fullyQualifiedTypeName name="com.leapmotion.leap.Frame"/>
-<fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
-<fullyQualifiedTypeName name="pete1.LeapController"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
 <fullyQualifiedTypeName name="java.awt.geom.Point2D.Float"/>
@@ -12,8 +7,6 @@
 <fullyQualifiedTypeName name="virtual.PObserver"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="javax.sound.midi.MidiSystem"/>
-<fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
@@ -50,14 +43,21 @@
 <fullyQualifiedTypeName name="processing.core.PConstants"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="g4p_controls.GLabel"/>
-<fullyQualifiedTypeName name="processing.core.PApplet"/>
 <fullyQualifiedTypeName name="g4p_controls.GButton"/>
 <fullyQualifiedTypeName name="g4p_controls.GEvent"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="pete1.ColorStrip"/>
 <fullyQualifiedTypeName name="pete1.Main"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="g4p_controls.GDropList"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="processing.core.PApplet"/>
+<fullyQualifiedTypeName name="SimpleOpenNI.SimpleOpenNI"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="processing.core.PVector"/>
 </qualifiedTypeNameHistroy>
